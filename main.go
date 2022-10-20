@@ -12,6 +12,5 @@ func main() {
 		time.Sleep(time.Second * 3)
 		fmt.Printf("the time in UTC is now %v", time.Now().UTC())
 		fmt.Println()
-		fmt.Println()
 	}
 }
