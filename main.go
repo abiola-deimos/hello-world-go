@@ -10,6 +10,8 @@ import (
 )
 
 func main() {
+	log.SetLevel(log.TraceLevel)
+
 	log.Debugf("application is starting and listening on 8080")
 
 	log.Debug("starting server")
