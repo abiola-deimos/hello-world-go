@@ -24,7 +24,9 @@ func main() {
 	log.Error(http.ListenAndServe(":8080", http.HandlerFunc(
 
 		func(w http.ResponseWriter, r *http.Request) {
-			log.Infof("%s, %+v, %s", r.URL.Path, r.Header, r.RemoteAddr)
+			log.Infof("Path: %s", r.URL.Path)
+			log.Infof("Remote Address: %s", r.RemoteAddr)
+			log.Infof("Request Header: %+v", r.Header)
 
 			hostname, _ := os.Hostname()
 			json.NewEncoder(w).Encode(map[string]any{
