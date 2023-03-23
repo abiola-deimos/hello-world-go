@@ -27,6 +27,9 @@ func main() {
 			log.Infof("Path: %s", r.URL.Path)
 			log.Infof("Remote Address: %s", r.RemoteAddr)
 			log.Infof("Request Header: %+v", r.Header)
+			log.Warn("testing warning log output during request")
+			log.Error("testing error log output during request")
+			log.Trace("testing trace log output during request")
 
 			hostname, _ := os.Hostname()
 			json.NewEncoder(w).Encode(map[string]any{
